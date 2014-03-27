@@ -28,16 +28,14 @@ class RestClientServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['restclient'] = $this->app->share(function($app)
-		  {
+		$this->app['restclient'] = $this->app->share(function($app) {
 		    return new RestClient;
-		  });
+		});
 
-			//$this->app->booting(function()
-			//{
-			//  $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-			//  $loader->alias('RestClient', 'Nathanmac\RestClient\Facades\RestClient');
-			//});
+		$this->app->booting(function() {
+			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
+			$loader->alias('RestClient', 'Nathanmac\RestClient\Facades\RestClient');
+		});
 	}
 
 	/**

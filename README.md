@@ -5,6 +5,24 @@ laravel-restclient
 
 Simple RestClient Package for Laravel 4
 
+Installation
+------------
+
+Begin by installing this package through Composer. Edit your project's `composer.json` file to require `Nathanmac/laravel-restclient`.
+
+	"require": {
+		"nathanmac/laravel-restclient": "dev-master"
+	}
+
+Next, update Composer from the Terminal:
+
+    composer update
+
+Once this operation completes, the final step is to add the service provider. Open `app/config/app.php`, and add a new item to the providers array.
+
+    'Nathanmac\RestClient\RestClientServiceProvider'
+
+
 ##### Calling an Endpoint
 ```php
 try {
