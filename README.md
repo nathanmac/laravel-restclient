@@ -2,6 +2,8 @@ laravel-restclient
 ==================
 
 [![Build Status](https://travis-ci.org/nathanmac/laravel-restclient.svg?branch=master)](https://travis-ci.org/nathanmac/laravel-restclient)
+[![Still Maintained](http://stillmaintained.com/nathanmac/laravel-restclient.png)](http://stillmaintained.com/nathanmac/laravel-restclient)
+
 
 Simple RestClient Package for Laravel 4
 
