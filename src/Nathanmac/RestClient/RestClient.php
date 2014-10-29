@@ -17,6 +17,7 @@ class RestClient {
         
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
         curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         if (is_array($headers) && count($headers) > 0)
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
