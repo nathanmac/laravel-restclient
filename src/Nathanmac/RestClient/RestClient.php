@@ -35,7 +35,7 @@ class RestClient {
 		return $this;
 	}
 
-	public function post($url, $payload, $headers = array(), $timeout = 30) {
+	public function post($uri, $payload, $headers = array(), $timeout = 30) {
 		$ch  = curl_init($uri);
         
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -59,7 +59,7 @@ class RestClient {
         return $this;
 	}
  	
- 	public function put($url, $payload, $headers = array(), $timeout = 30) {
+ 	public function put($uri, $payload, $headers = array(), $timeout = 30) {
         $ch  = curl_init($uri);
         
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
@@ -82,7 +82,7 @@ class RestClient {
         return $this;
  	}
 
- 	public function delete($url, $headers = array(), $timeout = 30) {
+ 	public function delete($uri, $headers = array(), $timeout = 30) {
         $ch  = curl_init($uri);
         
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
