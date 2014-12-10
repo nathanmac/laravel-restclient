@@ -42,8 +42,8 @@ class RestClient {
         curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
         curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
 
-        if (is_array($this->headers) && count($this->headers) > 0)
-            curl_setopt($ch, CURLOPT_HTTPHEADER, $this->headers);
+        if (is_array($headers) && count($headers) > 0)
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         
         if (curl_errno($ch)) {
             $error_codes = Config::get('restclient::error_codes');
@@ -66,8 +66,8 @@ class RestClient {
         curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
         curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
 
-        if (is_array($this->headers) && count($this->headers) > 0)
-            curl_setopt($ch, CURLOPT_HTTPHEADER, $this->headers);
+        if (is_array($headers) && count($headers) > 0)
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         
         if (curl_errno($ch)) {
             $error_codes = Config::get('restclient::error_codes');
@@ -88,8 +88,8 @@ class RestClient {
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
         curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
 
-        if (is_array($this->headers) && count($this->headers) > 0)
-            curl_setopt($ch, CURLOPT_HTTPHEADER, $this->headers);
+        if (is_array($headers) && count($headers) > 0)
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         if (curl_errno($ch)) {
             $error_codes = Config::get('restclient::error_codes');
