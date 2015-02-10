@@ -42,6 +42,19 @@ try {
   $response = RestClient::delete('hostname:port/endpoint');
 ```
 
+###### Adding HTTP Headers
+```php
+$headers = array(
+    'token: SLDKFJLKSDFJSLDFJ',
+    'other: asfasdfasdf'
+);
+
+$response = RestClient::get('hostname:port/endpoint', $headers);
+$response = RestClient::post('hostname:port/endpoint', 'payload data', $headers);
+$response = RestClient::put('hostname:port/endpoint', 'payload data', $headers);
+$response = RestClient::delete('hostname:port/endpoint', $headers);
+```
+
 ##### Get the HTTP Status Code
 ```php
 echo "HTTP Status Code: " . $response->getStatusCode(); // HTTP Status Code: 200
