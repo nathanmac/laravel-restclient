@@ -80,3 +80,13 @@ echo "Content-Type: " . $response->getHeader('content_type'); // Content-Type: a
 ```php
 echo "Time: " . $response->getTime();  // Time: 0.23453
 ```
+
+##### Adding custom cURL options for every request
+At the beginning publish the config file:
+
+```
+php artisan config:publish nathanmac/laravel-restclient
+```
+
+Then edit the `options` array in `app/config/packages/nathanmac/laravel-restclient/config.php`.
+
