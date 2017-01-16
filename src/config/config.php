@@ -2,6 +2,11 @@
 
 return array(
         'timeout' => 30,
+        'options' => array(
+                CURLOPT_RETURNTRANSFER => true,
+                // CURLOPT_SSL_VERIFYPEER => true,
+                // CURLOPT_CAINFO => "pathto/cacert.pem",
+        ),
         'http_status_codes' => array(
                                 100 => 'Continue',
                                 101 => 'Switching Protocols',
